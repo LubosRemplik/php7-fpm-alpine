@@ -43,6 +43,7 @@ RUN docker-php-ext-enable xdebug
 RUN pecl install imagick-3.4.3
 RUN docker-php-ext-enable imagick
 RUN docker-php-ext-install soap
+RUN docker-php-ext-install calendar
 
 # Composer
 COPY ./getcomposer.sh /root/getcomposer.sh
