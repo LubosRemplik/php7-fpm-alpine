@@ -17,7 +17,8 @@ RUN apk --no-cache --update add \
 	imagemagick-dev \
 	libtool \
 	bash git openssh \
-	bind-tools
+	bind-tools \
+	zlib-dev libzip-dev
 
 # Install supervisord
 RUN easy_install-2.7 supervisor
@@ -35,6 +36,7 @@ RUN docker-php-ext-configure gd \
 	--with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install json
+RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install pcntl
 RUN pecl install redis
