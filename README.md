@@ -1,3 +1,7 @@
+## Deprecated
+
+Use https://github.com/LubosRemplik/php and relevant tag
+
 ## PHP7 fpm alpine 
 
 Image with few additional php extensions and composer
